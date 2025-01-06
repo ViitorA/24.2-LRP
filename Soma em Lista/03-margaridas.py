@@ -9,4 +9,13 @@ matriz = []
 for i in range(l):
     matriz.append(list(map(int,input().split())))
 
-print(matriz)
+maior_soma = 0
+for i in range(0,l,m):
+    for j in range(0,c,n):
+        soma = 0
+        for k in range(m):
+            for l in range(n):
+                soma += matriz[k+i][l+j]
+        maior_soma = max(soma,maior_soma)
+
+print(maior_soma)
